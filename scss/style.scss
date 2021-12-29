@@ -1,0 +1,190 @@
+@import './colors';
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	font-size: 62.5%;
+}
+
+body {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-height: 100vh;
+	font-family: 'Indie Flower', cursive;
+	background-color: $light-white;
+}
+
+.header {
+	position: fixed;
+	top: 0;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 1rem 2rem;
+	width: 100vw;
+	background-color: $dark;
+	text-transform: uppercase;
+	color: $light-white;
+	z-index: 1;
+
+	&__icon {
+		font-size: 2.4rem;
+		color: $light-white;
+		background-color: transparent;
+		border: none;
+		cursor: pointer;
+		transition: color 0.3s;
+	}
+
+	&__heading {
+		font-size: 2rem;
+	}
+
+	&__icon--heart:hover {
+		color: $red-color;
+	}
+
+	&__icon--close-fav {
+		font-size: 3rem;
+
+		&:hover {
+			color: $light-white-shadow;
+		}
+	}
+}
+
+.quote-box {
+	position: relative;
+	margin: 1.5rem;
+	padding: 3rem;
+	max-width: 450px;
+	max-height: 500px;
+	font-size: 2rem;
+	text-align: center;
+	color: $light-white;
+	background-color: $main-color;
+	border-radius: 0.8rem;
+	box-shadow: 4px 4px 3px rgba(48, 71, 94, 0.6);
+
+	&__quote,
+	&__error {
+		margin-top: 3rem;
+	}
+
+	&__author {
+		margin-top: 1.7rem;
+		font-size: 2.2rem;
+		font-style: italic;
+		color: $light-white-shadow;
+	}
+
+	&__top-btn {
+		position: absolute;
+		top: 1rem;
+		right: 1rem;
+		padding: 0.5rem;
+		font-size: 2.8rem;
+		color: $light-white;
+		background-color: transparent;
+		border: none;
+		cursor: pointer;
+		transition: color 0.3s;
+
+		&--heart:hover {
+			color: $red-color;
+		}
+	}
+
+	&__btns-container {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin-top: 1.7rem;
+	}
+
+	&__btn {
+		padding: 0.7rem 1.4rem;
+		font-size: 2rem;
+		border: none;
+		border-radius: 0.8rem;
+		box-shadow: 0 0.4rem $light-white-shadow;
+		cursor: pointer;
+		transition: transform 0.2s, color 0.3s;
+
+		&--quote:hover {
+			color: rgb(59, 69, 85);
+		}
+
+		&--twitter:hover {
+			color: rgb(29, 161, 242);
+		}
+
+		&:active {
+			box-shadow: none;
+			transform: translate(0, 0.4rem);
+		}
+	}
+}
+
+.fav-quotes {
+	display: none;
+	margin-top: 13rem;
+	margin-bottom: 5rem;
+
+	.no-quotes {
+		font-size: 5rem;
+		text-align: center;
+	}
+}
+
+@media (min-width: 375px) {
+	.header__heading {
+		font-size: 2.6rem;
+	}
+}
+
+@media (min-width: 1024px) {
+	.header {
+		padding: 1.2rem 2.6rem;
+		font-size: 3rem;
+
+		&__heading {
+			font-size: 3.3rem;
+		}
+
+		&__icon--heart {
+			font-size: 3rem;
+		}
+	}
+
+	.quote-box {
+		font-size: 2.5rem;
+
+		&__btns-container {
+			margin-top: 2rem;
+		}
+
+		&__btn {
+			padding: 1rem 2rem;
+		}
+	}
+}
+
+@media (min-width: 1444px) {
+	.quote-box {
+		font-size: 3rem;
+
+		&__author {
+			font-size: 2.6rem;
+		}
+
+		&__heart-icon {
+			font-size: 3.2rem;
+		}
+	}
+}

@@ -1,0 +1,209 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  min-height: 100vh;
+  font-family: 'Indie Flower', cursive;
+  background-color: #dddddd;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 1rem 2rem;
+  width: 100vw;
+  background-color: #222831;
+  text-transform: uppercase;
+  color: #dddddd;
+  z-index: 1;
+}
+
+.header__icon {
+  font-size: 2.4rem;
+  color: #dddddd;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
+}
+
+.header__heading {
+  font-size: 2rem;
+}
+
+.header__icon--heart:hover {
+  color: #f05454;
+}
+
+.header__icon--close-fav {
+  font-size: 3rem;
+}
+
+.header__icon--close-fav:hover {
+  color: rgba(221, 221, 221, 0.7);
+}
+
+.quote-box {
+  position: relative;
+  margin: 1.5rem;
+  padding: 3rem;
+  max-width: 450px;
+  max-height: 500px;
+  font-size: 2rem;
+  text-align: center;
+  color: #dddddd;
+  background-color: #30475e;
+  border-radius: 0.8rem;
+  -webkit-box-shadow: 4px 4px 3px rgba(48, 71, 94, 0.6);
+          box-shadow: 4px 4px 3px rgba(48, 71, 94, 0.6);
+}
+
+.quote-box__quote, .quote-box__error {
+  margin-top: 3rem;
+}
+
+.quote-box__author {
+  margin-top: 1.7rem;
+  font-size: 2.2rem;
+  font-style: italic;
+  color: rgba(221, 221, 221, 0.7);
+}
+
+.quote-box__top-btn {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  padding: 0.5rem;
+  font-size: 2.8rem;
+  color: #dddddd;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
+}
+
+.quote-box__top-btn--heart:hover {
+  color: #f05454;
+}
+
+.quote-box__btns-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 1.7rem;
+}
+
+.quote-box__btn {
+  padding: 0.7rem 1.4rem;
+  font-size: 2rem;
+  border: none;
+  border-radius: 0.8rem;
+  -webkit-box-shadow: 0 0.4rem rgba(221, 221, 221, 0.7);
+          box-shadow: 0 0.4rem rgba(221, 221, 221, 0.7);
+  cursor: pointer;
+  -webkit-transition: color 0.3s, -webkit-transform 0.2s;
+  transition: color 0.3s, -webkit-transform 0.2s;
+  transition: transform 0.2s, color 0.3s;
+  transition: transform 0.2s, color 0.3s, -webkit-transform 0.2s;
+}
+
+.quote-box__btn--quote:hover {
+  color: #3b4555;
+}
+
+.quote-box__btn--twitter:hover {
+  color: #1da1f2;
+}
+
+.quote-box__btn:active {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  -webkit-transform: translate(0, 0.4rem);
+          transform: translate(0, 0.4rem);
+}
+
+.fav-quotes {
+  display: none;
+  margin-top: 13rem;
+  margin-bottom: 5rem;
+}
+
+.fav-quotes .no-quotes {
+  font-size: 5rem;
+  text-align: center;
+}
+
+@media (min-width: 375px) {
+  .header__heading {
+    font-size: 2.6rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .header {
+    padding: 1.2rem 2.6rem;
+    font-size: 3rem;
+  }
+  .header__heading {
+    font-size: 3.3rem;
+  }
+  .header__icon--heart {
+    font-size: 3rem;
+  }
+  .quote-box {
+    font-size: 2.5rem;
+  }
+  .quote-box__btns-container {
+    margin-top: 2rem;
+  }
+  .quote-box__btn {
+    padding: 1rem 2rem;
+  }
+}
+
+@media (min-width: 1444px) {
+  .quote-box {
+    font-size: 3rem;
+  }
+  .quote-box__author {
+    font-size: 2.6rem;
+  }
+  .quote-box__heart-icon {
+    font-size: 3.2rem;
+  }
+}
+/*# sourceMappingURL=style.css.map */
